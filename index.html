@@ -7,16 +7,45 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <!-- Шапка з навігацією та пошуком -->
+    <header>
+        <h1>Католог тварин</h1>
+        <nav>
+          <a href="#cats">Коти</a>
+          <a href="#guinea-pig">Морська свинка</a>
+        </nav>
+    </header>
 
-    <!-- Блок фільтрів за видом/розміром -->
+    <main>
+        <section id="filters">
+            <h2>Фільтри</h2>
+            <form>
+              <label for="animal-type">Вид тварин</label>
+              <input type="text" id="animal-type" name="animal-type">
+            </form>
+        </section>
 
-    <!-- Список карток тварин -->
+        <section id="catalog">
+            <h2>Тварини</h2>
+            <article  id="cats">
+                <h3>Кіт породи манічкін</h3>
+                <img src="assets/img/cat.jpg" alt="Фото кота">
+            </article>
+            <article id="guinea-pig">
+                <h3>Морська сивнка Бубу</h3>
+                <img src="assets/img/guinea-pig.jpg" alt="Фото морської свинки Бубу">
+            </article>
+        </section>
+    </main>
 
-    <!-- Блок деталей обраної тварини (догляд) -->
+    <aside>
+        <h2>Деталі догляду</h2>
+        <p>Тут буде детальна інформація про утримання та догляд за обраною твариною.</p>
+    </aside>
 
-    <!-- Підвал -->
+    <footer>
+        <p>Авторство: Мудрова Анна, група ІП-51</p>
+        <p>Практична робота №2, 2026 рік</p>
+    </footer>
 
     <script src="js/app.js"></script>
 </body>
