@@ -63,7 +63,7 @@ section {
     margin-right: 12px;
 }
 
-article {
+.animal-card {
     padding: 20px;
     border: 1px solid #8ffb5a;
     border-radius: 10px;
@@ -72,7 +72,7 @@ article {
     box-shadow: 0 4px 8px rgba(0, 100, 0, 0.1);
 }
 
-article img {
+.animal-card img {
     border-radius: 20%;
     max-width: 200px;
     height: auto;
