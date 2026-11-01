@@ -122,7 +122,7 @@ footer {
 
 @media (min-width: 1024px) {
     .cards {
-        grid-template-columns: repeat(4, 1 fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .layout-wrapper {
