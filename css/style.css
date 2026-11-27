@@ -1,4 +1,8 @@
 /* Базовий reset */
+/*
+  Обґрунтування нечіткої вимоги («має виглядати доброзичливо й затишно»):
+  Щоб інтерфейс каталогу сприймався доброзичливо й затишно, дизайн побудовано на м'яких теплих відтінках кави, піску та крему (#A07855, #F8E8C1, #D1B486, #3C2A1D). Таке поєднання не втомлює очі та створює спокійний домашній настрій. Замість гострих кутів для карток, фотографій, блоку фільтрів і бокової панелі використано помітні заокруглення (12px–18px) та ненав'язливі тіні, завдяки чому елементи виглядають візуально м'якше. Затишності додає й поєднання шрифту Georgia у заголовках із простим Segoe UI в основному тексті, а бейджі розміру тварин гармонійно вписані в ту саму палітру, щоб не перевантажувати сторінку зайвими акцентами.
+*/
 *,
 *::before,
 *::after {
@@ -10,8 +14,36 @@ body {
     font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    background-color: #ffffe0;
-    color: #046404;
+    background-color: #a07855;
+    color: #422d1c;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #3c2a1d;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #3c2a1d;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem; 
+    margin-bottom: 10px;
+}
+
+.animal-species {
+    font-size: 14px; 
+    font-style: italic;
+    color: #422d1c;
+    margin: 5px 0 15px 0;
 }
 
 img {
@@ -20,9 +52,9 @@ img {
 }
 
 header{
-    background-color: #73c649;
+    background-color: #f8e8c1;
     padding: 20px 30px;
-    border-bottom: 4px solid #0f5c0f;
+    border-bottom: 4px solid #654120;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,14 +69,14 @@ header nav{
 }
 
 header h1{
-    color: #ffffe0;
+    color: #3c2a1d;
     font-size: 2.2rem;
     margin: 0;
   
 }
 
 header nav a{
-    color: #ffffff;
+    color: #3c2a1d;
     text-decoration: none;
     font-weight: bold;
 }
@@ -65,7 +97,7 @@ section {
 
 #filters form {
     padding: 15px;
-    background-color: #c6f0b1;
+    background-color: #f8e8c1;
     border-radius: 18px;
     display: flex;
     flex-direction: column;
@@ -74,15 +106,18 @@ section {
 
 .animal-card {
     padding: 20px;
-    border: 1px solid #8ffb5a;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 100, 0, 0.1);
+    border: 1px solid #d1b486;
+    border-radius: 16px;
+    background-color: #f8e8c1;
+    box-shadow: 0 4px 10px rgba(60, 42, 29, 0.15);
 }
 
 .animal-card img {
-    border-radius: 20%;
-    max-width: 200px;
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 14px;
     display: block;
     margin-top: 15px;
 }
@@ -94,16 +129,41 @@ section {
 }
 
 aside {
-    background-color: #aef7a7;
-    border: 1px dashed #41a83a;
+    background-color: #f8e8c1;
+    border: 2px dashed #a07855;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 16px;
     margin-bottom: 40px;
 }
 
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.badge-small {
+    background-color: #d1b486;
+    color: #3c2a1d;
+}
+
+.badge-medium {
+    background-color: #f8e8c1;
+    color: #3c2a1d;
+    border: 2px solid #a07855;
+}
+
+.badge-large {
+    background-color: #3c2a1d;
+    color: #f8e8c1;
+}
+
 footer {
-    background-color: #73c649;
-    color:  #ffffe0;
+    background-color: #d1b486;
+    color:  #1A110B;
     font-size: 0.85rem;
     padding: 15px 0;
     text-align: center;
