@@ -8,13 +8,14 @@
 </head>
 <body>
     <header>
-        <h1>Католог тварин</h1>
+        <h1>Каталог тварин</h1>
         <nav>
           <a href="#cats">Коти</a>
           <a href="#guinea-pig">Морська свинка</a>
         </nav>
     </header>
 
+    <div class="layout-wrapper">
     <main>
         <section id="filters">
             <h2>Фільтри</h2>
@@ -26,14 +27,20 @@
 
         <section id="catalog">
             <h2>Тварини</h2>
-            <article  id="cats">
+            <div class="cards">
+                <article  id="cats" class="animal-card">
+                <span class="badge badge-medium">Середній</span>
                 <h3>Кіт породи манічкін</h3>
+                <p class="animal-species">Категорія: Котики</p>
                 <img src="assets/img/cat.jpg" alt="Фото кота">
             </article>
-            <article id="guinea-pig">
-                <h3>Морська сивнка Бубу</h3>
+            <article id="guinea-pig" class="animal-card">
+                <span class="badge badge-small">Малий</span>
+                <h3>Морська свинка Бубу</h3>
+                <p class="animal-species">Категорія: Морські свинки</p>
                 <img src="assets/img/guinea-pig.jpg" alt="Фото морської свинки Бубу">
             </article>
+            </div>
         </section>
     </main>
 
@@ -41,12 +48,14 @@
         <h2>Деталі догляду</h2>
         <p>Тут буде детальна інформація про утримання та догляд за обраною твариною.</p>
     </aside>
-
+    </div>
+    
     <footer>
         <p>Авторство: Мудрова Анна, група ІП-51</p>
-        <p>Практична робота №2, 2026 рік</p>
+        <p>Практична робота, 2026 рік</p>
     </footer>
 
     <script src="js/app.js"></script>
 </body>
 </html>
+

@@ -1,0 +1,199 @@
+/* Базовий reset */
+/*
+  Обґрунтування нечіткої вимоги («має виглядати доброзичливо й затишно»):
+  Щоб інтерфейс каталогу сприймався доброзичливо й затишно, дизайн побудовано на м'яких теплих відтінках кави, піску та крему (#A07855, #F8E8C1, #D1B486, #3C2A1D). Таке поєднання не втомлює очі та створює спокійний домашній настрій. Замість гострих кутів для карток, фотографій, блоку фільтрів і бокової панелі використано помітні заокруглення (12px–18px) та ненав'язливі тіні, завдяки чому елементи виглядають візуально м'якше. Затишності додає й поєднання шрифту Georgia у заголовках із простим Segoe UI в основному тексті, а бейджі розміру тварин гармонійно вписані в ту саму палітру, щоб не перевантажувати сторінку зайвими акцентами.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #a07855;
+    color: #422d1c;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #3c2a1d;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #3c2a1d;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem; 
+    margin-bottom: 10px;
+}
+
+.animal-species {
+    font-size: 14px; 
+    font-style: italic;
+    color: #422d1c;
+    margin: 5px 0 15px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header{
+    background-color: #f8e8c1;
+    padding: 20px 30px;
+    border-bottom: 4px solid #654120;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+header nav{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header h1{
+    color: #3c2a1d;
+    font-size: 2.2rem;
+    margin: 0;
+  
+}
+
+header nav a{
+    color: #3c2a1d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+#filters form {
+    padding: 15px;
+    background-color: #f8e8c1;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.animal-card {
+    padding: 20px;
+    border: 1px solid #d1b486;
+    border-radius: 16px;
+    background-color: #f8e8c1;
+    box-shadow: 0 4px 10px rgba(60, 42, 29, 0.15);
+}
+
+.animal-card img {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+    margin-top: 15px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+aside {
+    background-color: #f8e8c1;
+    border: 2px dashed #a07855;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.badge-small {
+    background-color: #d1b486;
+    color: #3c2a1d;
+}
+
+.badge-medium {
+    background-color: #f8e8c1;
+    color: #3c2a1d;
+    border: 2px solid #a07855;
+}
+
+.badge-large {
+    background-color: #3c2a1d;
+    color: #f8e8c1;
+}
+
+footer {
+    background-color: #d1b486;
+    color:  #1A110B;
+    font-size: 0.85rem;
+    padding: 15px 0;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    #filters form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .layout-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    }
+
+    main {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+}
